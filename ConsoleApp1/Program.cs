@@ -1,58 +1,42 @@
+using ChallengeApp21;
 
+User user1 = new User("Kuba", "Błaszczykowski", 35);
+User user2 = new User("Łukasz", "Piszczek", 38);
+User user3 = new User("Robert", "Lewandowski", 37);
 
-class Program
+user1.AddScore(5);
+user1.AddScore(7);
+user1.AddScore(9);
+user1.AddScore(11);
+user1.AddScore(13);
+
+user2.AddScore(2);
+user2.AddScore(5);
+user2.AddScore(9);
+user2.AddScore(2);
+user2.AddScore(1);
+
+user3.AddScore(2);
+user3.AddScore(4);
+user3.AddScore(6);
+user3.AddScore(8);
+user3.AddScore(10);
+
+List<User> users = new List<User>()
 {
-    static void Main()
+    user1, user2, user3
+};
+
+int maxResult = -1;
+User userWithMaxResult = null;
+
+foreach (var user in users)
+{
+    if (user.Result > maxResult)
     {
-        List<Employee> employees = new List<Employee>();
-
-        
-        Employee User1 = new Employee("Adam Mickiewicz", 30);
-        Employee User2 = new Employee("Julian Tuwim", 42);
-        Employee User3 = new Employee("Mikołaj Kopernik", 55);
-
-        User1.AddRating(7);
-        User1.AddRating(9);
-        User1.AddRating(8);
-        User1.AddRating(6);
-        User1.AddRating(10);
-
-        User2.AddRating(5);
-        User2.AddRating(7);
-        User2.AddRating(8);
-        User2.AddRating(9);
-        User2.AddRating(6);
-
-        User3.AddRating(10);
-        User3.AddRating(9);
-        User3.AddRating(8);
-        User3.AddRating(7);
-        User3.AddRating(6);
-
-        employees.Add(User1);
-        employees.Add(User2);
-        employees.Add(User3);
-
-       
-        Employee employeeWithHighestRating = null;
-        int maxRating = 0;
-
-        foreach (Employee employee in employees)
-        {
-            if (employee.GetAverageRating() > maxRating)
-            {
-                maxRating = employee.GetAverageRating();
-                employeeWithHighestRating = employee;
-            }
-        }
-
-       
-        if (employeeWithHighestRating != null)
-        {
-            Console.WriteLine("Pracownik z najwyższą liczbą ocen:");
-            Console.WriteLine("Imię i nazwisko: " + employeeWithHighestRating.FullName);
-            Console.WriteLine("Wiek: " + employeeWithHighestRating.Age);
-            Console.WriteLine("Średnia ocen: " + employeeWithHighestRating.GetAverageRating());
-        }
+        userWithMaxResult = user;
+        maxResult = user.Result;
     }
 }
+
+Console.WriteLine($" Najlepszym piłkarzem/pracownikiem został: {userWithMaxResult.Name} {userWithMaxResult.Surname} lat {userWithMaxResult.Age} i zdobył: {userWithMaxResult.Result} punktów");
