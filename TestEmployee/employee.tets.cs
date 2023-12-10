@@ -1,15 +1,16 @@
 ﻿using ChallengeApp21;
-using TestEmployee;
+using NUnit.Framework;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 
 namespace TestEmployee
 {
-    
-    public class Employeetest()
+
+    public class EmployeeTest
     {
-        [TEST]
-        public void TESTMin()
-            
+        [Test]
+        public void TestMin()
+
         {
             var employee = new Employee("Krzysztof", "Pietrzak");
             employee.AddGrade(1);
@@ -24,8 +25,8 @@ namespace TestEmployee
 
 
         }
-        [TEST]
-        public void TESTAverage()
+        [Test]
+        public void TestAverage()
 
         {
             var employee = new Employee("Krzysztof", "Pietrzak");
@@ -39,8 +40,8 @@ namespace TestEmployee
 
         }
 
-        [TEST]
-        public void TESTMax()
+        [Test]
+        public void TestMax()
 
         {
             var employee = new Employee("Krzysztof", "Pietrzak");
