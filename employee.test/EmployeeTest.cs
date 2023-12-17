@@ -30,17 +30,6 @@ public class TypeTest
         Assert.AreEqual(5, statistics.Min);
 
 
-       
-
-
-
-
-
-
-
-
-
-
 
     }
 
@@ -59,18 +48,6 @@ public class TypeTest
         var statistics = employee.GetStatistics();
 
         Assert.AreEqual(10, statistics.Max);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
