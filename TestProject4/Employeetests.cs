@@ -1,27 +1,21 @@
-using ChallengeApp21;
-using NUnit.Framework;
-
-namespace challenge.tests;
-
-public class TypeTest
 
 
+
+
+namespace ChallengeApp21;
+
+public class Employeetest
 {
-
-
-
-
-
-
+  
 
     [Test]
 
     public void MinTest()
+
+
+
     {
-
-
         var employee = new Employee("Krzysztof Pietrzak");
-
         employee.AddGrade(5);
         employee.AddGrade(6);
         employee.AddGrade(8);
@@ -32,16 +26,18 @@ public class TypeTest
 
 
 
+
     }
 
 
     [Test]
+
     public void MaxTest()
+
+
+
     {
-
-
         var employee = new Employee("Krzysztof Pietrzak");
-
         employee.AddGrade(10);
         employee.AddGrade(6);
         employee.AddGrade(7);
@@ -51,14 +47,19 @@ public class TypeTest
         Assert.AreEqual(10, statistics.Max);
 
 
+
+
     }
+
+
     [Test]
+
     public void AverageTest()
+
+
+
     {
-
-
         var employee = new Employee("Krzysztof Pietrzak");
-
         employee.AddGrade(5);
         employee.AddGrade(3);
         employee.AddGrade(10);
@@ -70,44 +71,7 @@ public class TypeTest
 
 
 
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
-
-
-
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
