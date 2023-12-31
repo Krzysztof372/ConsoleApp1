@@ -7,9 +7,7 @@ using ChallengeApp21;
 namespace ChallengeApp21
 { }
 public class Employee
-
 {
-
     private List<float> grades = new List<float>();
 
     public Employee(string name)
@@ -17,7 +15,6 @@ public class Employee
         this.Name = name;
 
     }
-
     public Employee(string name, string surname)
     {
         this.Name = name;
@@ -30,41 +27,27 @@ public class Employee
 
 
     public void AddGrade(float grade)
-
     {
         if (grade >= 0 && grade <= 100)
-
-
         {
-
             this.grades.Add(grade);
-
         }
-
         else
 
         {
 
             Console.WriteLine("Invalid code value");
         }
-
-
     }
     public void AddGrade( string grade)
-
     {
-
         if
 
             (float.TryParse(grade, out float result))
-
         {
-
             this.AddGrade(result);
         }
-
         else
-
         {
             Console.WriteLine("String is not float");
 
@@ -76,19 +59,13 @@ public class Employee
         if (grade < 0 && grade > 100)
 
         {
-
             this.grades.Add(grade);
 
-
         }
+
         else
-
         {
-
-
             Console.WriteLine("Int under the 100");
-
-
 
         }
     }
@@ -114,7 +91,6 @@ public class Employee
 
 
     }
-
     public Statistics GetStatistics()
     {
         var statistics = new Statistics();
@@ -122,15 +98,12 @@ public class Employee
         statistics.Max = float.MinValue;
         statistics.Average = 0;
 
-
         foreach (var grade in this.grades)
         {
             statistics.Max = Math.Max(statistics.Max, grade);
             statistics.Average += grade;
             statistics.Min = Math.Min(statistics.Min, grade);
         }
-
-
         statistics.Average /= this.grades.Count;
 
         return statistics;
