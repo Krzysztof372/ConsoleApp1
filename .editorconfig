@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# NUnit1026: The test or setup/teardown method is not public
+dotnet_diagnostic.NUnit1026.severity = none
