@@ -2,15 +2,14 @@
 
 using ChallengeApp21;
 
-namespace ChallengeApp
-{
+
+
     public class Employee
     {
         private List<float> grades = new List<float>();
 
         public Employee()
         {
-
         }
         public Employee(string name, string surname)
         {
@@ -131,4 +130,3 @@ namespace ChallengeApp
             }
         }
     }
-}

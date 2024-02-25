@@ -1,4 +1,4 @@
-﻿﻿using ChallengeApp;
+﻿﻿using ChallengeApp21;
 
 Console.WriteLine("Witamy w naszym programie do oceny pracowników");
 Console.WriteLine("=============================================");

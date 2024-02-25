@@ -17,6 +17,6 @@ namespace ChallengeApp21
         public char AverageLetter { get; set; }
         
         public float Max { get;  set; }
- 
+
     }
 }
