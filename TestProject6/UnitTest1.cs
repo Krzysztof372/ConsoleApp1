@@ -4,8 +4,6 @@ using ChallengeApp;
 namespace ChallengeApp21;
 public class Tests
  {
-
-
     [Test]
     public void When_AllratingsHaveAdividedAverage()
     {
@@ -21,21 +19,11 @@ public class Tests
         Assert.AreEqual(100, statistics.Max);
         Assert.AreEqual(40, statistics.Min);
         Assert.AreEqual('B', statistics.AverageLetter);
-
-
     }
-
-
-    
-
 }
-
-
 
 public class Tests2
 {
-
-
     [Test]
     public void When_allswitchesgotaverage()
     {
@@ -45,18 +33,11 @@ public class Tests2
         employee.AddGrade("B");
         employee.AddGrade("A");
 
-
         var statistics = employee.GetStatistics();
 
         Assert.AreEqual(80, statistics.Average);
         Assert.AreEqual(100, statistics.Max);
         Assert.AreEqual(60, statistics.Min);
         Assert.AreEqual('A', statistics.AverageLetter);
-
-
     }
-
-
-
-
 }
