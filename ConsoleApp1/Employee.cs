@@ -89,6 +89,7 @@ public class Employee
             grades.Add(grade);
         }
 
+
         var longAsFloat = (float)grade;
         {
             switch (grade)
