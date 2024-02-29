@@ -84,35 +84,29 @@ public class Employee
     }
 
     public void AddGrade(char grade)
-    {
-        {
-            grades.Add(grade);
-        }
-
-
-        var longAsFloat = (float)grade;
         {
             switch (grade)
+
             {
                 case 'A':
                 case 'a':
-                    this.grades.Add(100);
+                    AddGrade(100);
                     break;
                 case 'B':
                 case 'b':
-                    this.grades.Add(80);
+                    AddGrade(80);
                     break;
                 case 'C':
                 case 'c':
-                    this.grades.Add(60);
+                    AddGrade(60);
                     break;
                 case 'D':
                 case 'd':
-                    this.grades.Add(40);
+                    AddGrade (40);
                     break;
                 case 'E':
                 case 'e':
-                    this.grades.Add(20);
+                    AddGrade(20);
                     break;
                 default:
                     this.grades.Add(0);
@@ -138,4 +132,8 @@ public class Employee
         }
     }
 
+    private void AddGrade(int v)
+    {
+        throw new NotImplementedException();
+    }
 }
