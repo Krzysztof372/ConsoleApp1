@@ -15,7 +15,20 @@ while (true)
     {
         break;
     }
-    employee.AddGrade(input);
+    try
+    {
+
+        var floatInput = float.Parse(input);
+        employee.AddGrade(floatInput);
+    }
+
+    catch (Exception ex)
+
+    {
+        Console.WriteLine($"Exception catched: {ex.Message}");
+
+    }
+
 }
 
 var statistics = employee.GetStatistics();
@@ -23,3 +36,6 @@ Console.WriteLine($"Average: {statistics.Average}");
 Console.WriteLine($"Min: {statistics.Min}");
 Console.WriteLine($"Max: {statistics.Max}");
 Console.WriteLine($"Grade letter: {statistics.AverageLetter}");
+
+
+

@@ -29,7 +29,7 @@ public class Employee
         }
         else
         {
-            Console.WriteLine("invalid grade value");
+            throw new Exception("invalid grade value");
         }
     }
 
@@ -84,56 +84,59 @@ public class Employee
     }
 
     public void AddGrade(char grade)
-        {
-            switch (grade)
-
-            {
-                case 'A':
-                case 'a':
-                    AddGrade(100);
-                    break;
-                case 'B':
-                case 'b':
-                    AddGrade(80);
-                    break;
-                case 'C':
-                case 'c':
-                    AddGrade(60);
-                    break;
-                case 'D':
-                case 'd':
-                    AddGrade (40);
-                    break;
-                case 'E':
-                case 'e':
-                    AddGrade(20);
-                    break;
-                default:
-                    this.grades.Add(0);
-                    Console.WriteLine("Wrong  letter");
-                    break;
-            }
-        }
-
-        void AddGrade(string grade)
-        {
-            if (float.TryParse(grade, out float result))
-            {
-                this.AddGrade(result);
-            }
-            else if (char.TryParse(grade, out char resultChar))
-            {
-                this.AddGrade(resultChar);
-            }
-            else
-            {
-                Console.WriteLine("float is not a value");
-            }
-        }
-    }
-
-    private void AddGrade(int v)
     {
-        throw new NotImplementedException();
+        switch (grade)
+
+        {
+            case 'A':
+            case 'a':
+                AddGrade(100);
+                break;
+            case 'B':
+            case 'b':
+                AddGrade(80);
+                break;
+            case 'C':
+            case 'c':
+                AddGrade(60);
+                break;
+            case 'D':
+            case 'd':
+                AddGrade(40);
+                break;
+            case 'E':
+            case 'e':
+                AddGrade(20);
+                break;
+            default:
+
+                throw new Exception("Wrong Letter");
+                break;
+
+        }
     }
+
+    void AddGrade(string grade)
+    {
+        if (float.TryParse(grade, out float result))
+        {
+            this.AddGrade(result);
+        }
+        else if (char.TryParse(grade, out char resultChar))
+        {
+            this.AddGrade(resultChar);
+        }
+        else
+        {
+            throw new Exception("float is not a value");
+        }
+    }
+
+    
+
 }
+
+  
+
+
+
