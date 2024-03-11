@@ -4,22 +4,28 @@ using ChallengeApp21;
 
 
 
-public class Employee
+public class Employee : Person
 {
     private List<float> grades = new List<float>();
+    private readonly char M;
 
-    public Employee()
-    {
-    }
+    
     public Employee(string name, string surname)
+
+
+        : base(name)
     {
+       
         this.Name = name;
         this.Surname = surname;
+        this.Gender = M;
     }
 
     public string Name { get; private set; }
 
     public string Surname { get; private set; }
+
+    public char Gender { get; private set; }
 
     public void AddGrade(float grade)
     {
