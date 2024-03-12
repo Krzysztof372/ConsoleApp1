@@ -5,13 +5,13 @@ namespace ChallengeApp21
     {
         public Person(string name)
         {
-            this.name = name;
+            this.Name = name;
            
 
         }
 
       
-        public string name { get; set; }
+        public string Name { get; set; }
 
         public char Gender { get; set; }
 
