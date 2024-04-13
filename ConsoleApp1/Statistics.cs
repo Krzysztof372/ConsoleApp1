@@ -18,5 +18,7 @@ namespace ChallengeApp21
         
         public float Max { get;  set; }
 
+        
+
     }
 }

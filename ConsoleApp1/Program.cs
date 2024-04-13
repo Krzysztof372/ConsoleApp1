@@ -6,6 +6,8 @@ Console.WriteLine("Aby zobaczyć wyniki wprowadź q");
 Console.WriteLine();
 
 var employee = new Employee();
+employee.ToString();
+
 
 while (true)
 {

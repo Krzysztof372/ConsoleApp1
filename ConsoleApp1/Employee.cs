@@ -1,10 +1,9 @@
 ﻿
 
 using ChallengeApp21;
+using System.Configuration;
 
-
-
-public class Employee : Person
+public class Employee : IEmployee
 {
     private List<float> grades = new List<float>();
     private readonly char M;
@@ -13,12 +12,16 @@ public class Employee : Person
     public Employee(string name, string surname)
 
 
-        : base(name)
+        
     {
        
         this.Name = name;
         this.Surname = surname;
-        this.Gender = M;
+       
+    }
+
+    public Employee()
+    {
     }
 
     public string Name { get; private set; }
@@ -138,8 +141,10 @@ public class Employee : Person
         }
     }
 
-    
-
+    void IEmployee.AddGrade(string grade)
+    {
+        throw new NotImplementedException();
+    }
 }
 
   
