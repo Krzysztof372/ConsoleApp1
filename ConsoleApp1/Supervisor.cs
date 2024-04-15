@@ -63,8 +63,8 @@ public class Supervisor : IEmployee
                         break;
                     default:
 
-                        throw new Exception("Wrong Number");
-                        break;
+                        throw new NotImplementedException("Wrong Number");
+                        
                 }
             }
 
@@ -90,15 +90,15 @@ public class Supervisor : IEmployee
 
         {
             case "A":
-                string tekst = new string('a', 6);
+                (char item1, int item2) = ('a', 6);
                 AddGrade(95);
                 break;
             case "B":
-                string tekst1; new string('b', -6);
+                (char, int) value = ('b', -6);
                 AddGrade(90);
                 break;
             case "C":
-                string tekst2; new string('c', +6);
+                (char, int) value1 = ('c', +6);
                 AddGrade(85);
                 break;
             case "D":
@@ -142,7 +142,7 @@ public class Supervisor : IEmployee
                 AddGrade(30);
                 break;
             case "N":
-                string tekst13; new string('n', 2);
+                string ; new string('n', 2);
                 AddGrade(25);
                 break;
             case "P":
@@ -164,8 +164,8 @@ public class Supervisor : IEmployee
 
             default:
 
-                throw new Exception("Wrong Letter");
-                break;
+                throw new NotImplementedException("Wrong Letter");
+                
 
 
 

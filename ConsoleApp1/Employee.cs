@@ -120,7 +120,6 @@ public class Employee : IEmployee
             default:
 
                 throw new Exception("Wrong Letter");
-                break;
 
         }
     }
