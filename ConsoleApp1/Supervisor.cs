@@ -1,13 +1,18 @@
 ﻿using ChallengeApp21;
 
 
-public class Supervisor : IEmployee
+
+ public class Supervisor : IEmployee
 {
 
-    public string Name => throw new NotImplementedException();
+    public string Name => throw new Exception();
 
-    public string Surname => throw new NotImplementedException();
+    public string Surname => throw new Exception();
 
+
+
+    private List<float> grades = new List<float>();
+    private readonly char M;
 
 
     public void AddGrade(float grade)
@@ -70,9 +75,45 @@ public class Supervisor : IEmployee
         }
     }
 
+   
+
     public Statistics GetStatistics()
     {
-        throw new NotImplementedException();
+        var statistics = new Statistics();
+        statistics.Average = 0;
+        statistics.Max = float.MinValue;
+        statistics.Min = float.MaxValue;
+
+        foreach (var grade in this.grades)
+        {
+            if (grade >= 0)
+            {
+                statistics.Max = Math.Max(statistics.Max, grade);
+                statistics.Min = Math.Min(statistics.Min, grade);
+                statistics.Average += grade;
+            }
+        }
+        statistics.Average /= this.grades.Count;
+
+        switch (statistics.Average)
+        {
+            case var average when average >= 80:
+                statistics.AverageLetter = 'A';
+                break;
+            case var average when average >= 60:
+                statistics.AverageLetter = 'B';
+                break;
+            case var average when average >= 40:
+                statistics.AverageLetter = 'C';
+                break;
+            case var average when average >= 20:
+                statistics.AverageLetter = 'D';
+                break;
+            default:
+                statistics.AverageLetter = 'E';
+                break;
+        }
+        return statistics;
     }
 
     void IEmployee.AddGrade(string grade)
