@@ -5,14 +5,14 @@
  public class Supervisor : IEmployee
 {
 
-    public string Name => throw new Exception();
+    public string Name { get; set; }
 
-    public string Surname => throw new Exception();
+    public string Surname { get; set; }
 
 
 
     private List<float> grades = new List<float>();
-    private readonly char M;
+  
 
 
     public void AddGrade(float grade)
