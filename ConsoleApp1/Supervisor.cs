@@ -68,7 +68,7 @@
                         break;
                     default:
 
-                        throw new NotImplementedException("Wrong Number");
+                        throw new Exception("Wrong Number");
 
                 }
             }
