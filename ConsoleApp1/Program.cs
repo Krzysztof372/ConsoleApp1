@@ -5,8 +5,13 @@ Console.WriteLine("=============================================");
 Console.WriteLine("Aby zobaczyć wyniki wprowadź q");
 Console.WriteLine();
 
-var employee = new Employee();
-employee.ToString();
+var employee = new EmployeeInFile("Krzysztof", "Pietrzak");
+
+employee.AddGrade(0.5f);
+employee.AddGrade(15.5f);
+employee.AddGrade(30.5f);
+employee.AddGrade(10f);
+employee.AddGrade(155f);
 
 
 while (true)
@@ -34,6 +39,7 @@ while (true)
 }
 
 var statistics = employee.GetStatistics();
+
 Console.WriteLine($"Average: {statistics.Average}");
 Console.WriteLine($"Min: {statistics.Min}");
 Console.WriteLine($"Max: {statistics.Max}");

@@ -198,8 +198,13 @@
 
             default:
 
-                throw new NotImplementedException("Wrong Letter");
+                throw new Exception("Wrong Letter");
         }
+    }
+
+    public Statistics ReadGradesFromFile()
+    {
+        throw new NotImplementedException();
     }
 }
 

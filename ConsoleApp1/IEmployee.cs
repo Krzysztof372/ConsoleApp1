@@ -18,5 +18,6 @@ namespace ChallengeApp21
         public void AddGrade(char grade);
 
         void AddGrade(string grade);
+        Statistics ReadGradesFromFile();
     }
 }

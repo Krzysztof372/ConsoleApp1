@@ -142,6 +142,11 @@ public class Employee : IEmployee
 
     void IEmployee.AddGrade(string grade)
     {
+        throw new Exception();
+    }
+
+    public Statistics ReadGradesFromFile()
+    {
         throw new NotImplementedException();
     }
 }
