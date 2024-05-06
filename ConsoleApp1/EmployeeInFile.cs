@@ -17,9 +17,9 @@ namespace ChallengeApp21
 
 
         private const string filename = "grades.txt";
-       
 
-        public string fileName { get; private set; }
+
+        
 
         public override void AddGrade(float grade)
         {
@@ -74,7 +74,7 @@ namespace ChallengeApp21
 
             }
         }
-            
+
 
         public override void AddGrade(string grade)
         {
@@ -102,7 +102,7 @@ namespace ChallengeApp21
             return result;
         }
 
-        private  List<float> ReadGradesfromfile()
+        private List<float> ReadGradesfromfile()
         {
             var grades = new List<float>();
             if (File.Exists(filename))
@@ -123,19 +123,19 @@ namespace ChallengeApp21
                 }
 
 
-                
+
             }
 
             return ReadGradesfromfile();
         }
-       
+
 
 
         private Statistics CountStatistics(List<float> grades)
 
-           
-           
-            
+
+
+
         {
 
             var statistics = new Statistics();
@@ -156,16 +156,34 @@ namespace ChallengeApp21
                 statistics.Average /= this.grades.Count;
             }
 
-            return CountStatistics();
-
+            switch (statistics.Average)
+            {
+                case var average when average >= 80:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var average when average >= 60:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var average when average >= 40:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var average when average >= 20:
+                    statistics.AverageLetter = 'D';
+                    break;
+                default:
+                    statistics.AverageLetter = 'E';
+                    break;
+            }
+            return statistics;
 
             
+
+
+
+
         }
 
-        private Statistics CountStatistics()
-        {
-            throw new Exception();
-        }
+
     }
     }
 
