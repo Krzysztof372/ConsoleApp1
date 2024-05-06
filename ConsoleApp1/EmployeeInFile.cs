@@ -33,22 +33,63 @@ namespace ChallengeApp21
 
         public override void AddGrade(double grade)
         {
-
+            var doubleAsFloat = (float)grade;
+            AddGrade(doubleAsFloat);
         }
 
         public override void AddGrade(long grade)
         {
-
+            var longAsFloat = (float)grade;
+            AddGrade(longAsFloat);
         }
 
         public override void AddGrade(char grade)
         {
+            switch (grade)
 
+            {
+                case 'A':
+                case 'a':
+                    AddGrade(100);
+                    break;
+                case 'B':
+                case 'b':
+                    AddGrade(80);
+                    break;
+                case 'C':
+                case 'c':
+                    AddGrade(60);
+                    break;
+                case 'D':
+                case 'd':
+                    AddGrade(40);
+                    break;
+                case 'E':
+                case 'e':
+                    AddGrade(20);
+                    break;
+                default:
+
+                    throw new Exception("Wrong Letter");
+
+            }
         }
+            
 
         public override void AddGrade(string grade)
         {
-
+            if (float.TryParse(grade, out float result))
+            {
+                this.AddGrade(result);
+            }
+            else if (char.TryParse(grade, out char resultChar))
+            {
+                this.AddGrade(resultChar);
+            }
+            else
+            {
+                throw new Exception("float is not a value");
+            }
         }
 
         public override Statistics GetStatistics()
@@ -121,16 +162,10 @@ namespace ChallengeApp21
             
         }
 
-        private Statistics ReadGradesFromFile()
-
-        {
-            throw new Exception();
-        }
-        
-       
         private Statistics CountStatistics()
         {
             throw new Exception();
         }
+    }
     }
 }
