@@ -176,14 +176,7 @@ namespace ChallengeApp21
             }
             return statistics;
 
-            
-
-
-
-
         }
-
-
     }
     }
 
