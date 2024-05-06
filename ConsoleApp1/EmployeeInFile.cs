@@ -126,7 +126,7 @@ namespace ChallengeApp21
 
             }
 
-            return ReadGradesfromfile();
+            return grades;
         }
 
 
