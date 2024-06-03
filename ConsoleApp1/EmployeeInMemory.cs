@@ -1,15 +1,28 @@
 ﻿
+
+
 namespace ChallengeApp21
 {
-    public  class EmployeeInMemory : EmployeeBase
+    public class EmployeeInMemory : EmployeeBase
     {
-        protected EmployeeInMemory(string name, string surname)
+
+
+        private delegate string WriteMessage(string Message);
+
+
+        public EmployeeInMemory(string name, string surname)
             : base(name, surname)
         {
 
-            this.Name = name;
-            this.Surname = surname;
+            
         }
+
+      
+            
+
+        
+
+
 
 
 
@@ -19,6 +32,7 @@ namespace ChallengeApp21
 
 
         private List<float> grades = new List<float>();
+        
 
         public override void AddGrade(float grade)
         {

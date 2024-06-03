@@ -1,4 +1,5 @@
 ﻿﻿using ChallengeApp21;
+using System.ComponentModel.DataAnnotations;
 
 Console.WriteLine("Witamy w naszym programie do oceny pracowników i supervisor");
 Console.WriteLine("=============================================");
@@ -6,6 +7,7 @@ Console.WriteLine("Aby zobaczyć wyniki wprowadź q");
 Console.WriteLine();
 
 var employee = new EmployeeInFile("Krzysztof", "Pietrzak");
+
 
 employee.AddGrade(0.5f);
 employee.AddGrade(15.5f);

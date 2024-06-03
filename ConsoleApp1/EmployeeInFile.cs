@@ -7,6 +7,8 @@ namespace ChallengeApp21
     {
 
         private List<float> grades = new List<float>();
+        public object Result;
+
         public EmployeeInFile(string name, string surname) :
 
             base(name, surname)
@@ -14,7 +16,7 @@ namespace ChallengeApp21
 
         }
 
-
+       
 
         private const string filename = "grades.txt";
 
