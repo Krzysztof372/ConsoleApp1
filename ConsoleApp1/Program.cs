@@ -1,5 +1,5 @@
 ﻿﻿using ChallengeApp21;
-using System.ComponentModel.DataAnnotations;
+
 
 Console.WriteLine("Witamy w naszym programie do oceny pracowników i supervisor");
 Console.WriteLine("=============================================");
