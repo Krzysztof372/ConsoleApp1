@@ -1,20 +1,40 @@
-namespace TestProject9
-{
+
+
+
+
+
+namespace TestProject9;
+
+
+
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
-        [Test]
-        public void Test1()
+
+    [Test]
+    public void WhenUserCollectTwoScores_ShouldCorrectResult()
         {
 
+        //arrange
+
+        var user = new User();
+        user.AddScore(5);
+        user.AddScore(5);
 
 
 
-            Assert.AreEqual
+        //act
+
+            
+        var result = user.Result;
+
+
+
+        //assert
+
+        Assert.AreEqual(10, result);
+
+           
         }
     }
-}
+

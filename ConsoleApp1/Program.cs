@@ -16,6 +16,8 @@ employee.AddGrade(10f);
 employee.AddGrade(155f);
 
 
+
+
 while (true)
 {
     Console.WriteLine("Podaj kolejną ocenę pracownika: ");
