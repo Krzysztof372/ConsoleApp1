@@ -9,7 +9,7 @@ namespace TestProject9
 
     {
         [Test]
-        public void TEST()
+        public void TwoUsers_ShouldEqual()
         {
 
             //arrange
@@ -39,7 +39,7 @@ namespace TestProject9
 
 
         [Test]
-        public void TEST2()
+        public void TwoUsers_GetDouble()
         {
 
             //arrange
@@ -63,7 +63,7 @@ namespace TestProject9
 
 
         [Test]
-        public void TEST3()
+        public void TwoUsers_GetNumbers()
         {
 
             //arrange
