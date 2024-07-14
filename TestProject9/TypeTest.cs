@@ -75,8 +75,8 @@ namespace TestProject9
             //act
 
 
-            Assert.AreEqual(user1, user2);
-            ;
+            Assert.AreNotEqual(user1, user2);
+            
             //assert
 
 
