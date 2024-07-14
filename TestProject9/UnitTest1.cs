@@ -25,8 +25,8 @@ namespace TestProject9;
 
         //act
 
-            
-        var result = user.Result;
+
+        var result = user.GetResult();
 
 
 

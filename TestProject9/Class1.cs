@@ -24,7 +24,10 @@ class User
     private string name;
     private int score;
 
-    public object? Result { get;  set; }
+    public int GetResult ()
+
+    {  return score; }
+
 
 
     public User(string login)
@@ -48,11 +51,10 @@ class User
         
     }
 
-    public void AddScore(int score) 
+    public void AddScore(int number)
     {
-        AddScore();
-
-    }
+        score = score + number;
+  }
 }
 
 
