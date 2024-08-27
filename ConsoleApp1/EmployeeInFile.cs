@@ -100,7 +100,6 @@ namespace ChallengeApp21
             var Gradesfromfile = ReadGradesfromfile();
             var result = this.CountStatistics(Gradesfromfile);
 
-
             return result;
         }
 
@@ -130,8 +129,6 @@ namespace ChallengeApp21
 
             return grades;
         }
-
-
 
         private Statistics CountStatistics(List<float> grades)
 

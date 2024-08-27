@@ -10,10 +10,7 @@ var employee = new EmployeeInFile("Krzysztof", "Pietrzak");
 
 
 employee.AddGrade(0.5f);
-employee.AddGrade(15.5f);
-employee.AddGrade(30.5f);
-employee.AddGrade(10f);
-employee.AddGrade(155f);
+
 
 
 
